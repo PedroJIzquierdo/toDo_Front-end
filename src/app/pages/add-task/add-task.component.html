@@ -1,0 +1,27 @@
+<div class="container">
+
+  <form class="row g-3 needs-validation"  [formGroup]="addTask" (ngSubmit)="onSubmit()">
+    <div class="col-md-4">
+      <label for="tName" id="tName" class="form-label">Task Name</label>
+      <input formControlName="tittle" type="text" class="form-control" id="tittle" placeholder="Task Name" >
+      <div class="valid-feedback">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="eta" class="form-label">End of task</label>
+      <input formControlName="eta" type="date" class="form-control" id="eta">
+      <div class="valid-feedback">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="tDescription" class="form-label">Task Description</label>
+      <textarea formControlName="description" rows="6" class="form-control" id="description" placeholder="Write task description..." ></textarea>
+      <div class="valid-feedback">
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit" >Submit form</button>
+    </div>
+  </form>
+
+</div>

@@ -1,0 +1,13 @@
+.container{
+    display: grid;
+    position: relative;
+    justify-content:center;
+    padding-bottom: 350px;
+    margin-top: 200px;
+    padding: 30px;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+

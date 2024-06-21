@@ -1,0 +1,27 @@
+<table class="table table-success table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">End of Task</th>
+        <th scope="col">Finished</th>
+        <th scope="col">Date of Create</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr *ngFor="let task of taskList">
+          <th>{{task.id}}</th>
+          <td>{{task.tittle}}</td>
+          <td>{{task.description }}</td>
+          <td>{{task.eta | date: 'dd/MMMM/YYYY'}}</td>
+          <td>{{task.finished}}</td>
+          <td>{{task.createDate| date: 'dd/MMMM/YYYY'}}</td>
+          <td><button (click)="deleteTask(task.id)" type="button" class="btn btn-danger">Delete</button>
+            <button (click)="finishedTask(task.id)" type="button" class="btn btn-success">Finished</button></td>
+        </tr>
+      
+    </tbody>
+  </table>
